@@ -27,9 +27,10 @@ import android.widget.Toast;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
-import org.ligi.fahrplan.congress.BuildConfig;
-import org.ligi.fahrplan.congress.R;
+
+import info.metadude.java.library.brockman.models.Stream;
 
 interface OnCloseDetailListener {
 
@@ -89,7 +90,7 @@ public class EventDetailFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
+                             Bundle savedInstanceState) {
         if (sidePane) {
             return inflater.inflate(R.layout.detail_narrow, container, false);
         } else {
@@ -203,6 +204,31 @@ public class EventDetailFragment extends Fragment {
                 links = links.replaceAll("\\),", ")<br>");
                 links = StringUtils.getHtmlLinkFromMarkdown(links);
                 setUpHtmlTextView(t, regular, links);
+            }
+
+            // Media streams (optional)
+
+            l = (TextView) view.findViewById(R.id.streamsSection);
+            l.setTypeface(bold);
+            t = (TextView) view.findViewById(R.id.streams);
+            t.setTypeface(regular);
+
+            String joinedStreamLinks = null;
+            if (MyApp.offers != null && lecture.room != null) {
+                List<Stream> streamsForLectureRoom = MediaStreamsHelper.
+                        getStreamsForLectureRoom(MyApp.offers, lecture.room);
+                joinedStreamLinks = MediaStreamsHelper
+                        .getJoinedStreamLinks(streamsForLectureRoom);
+            }
+            if (joinedStreamLinks == null) {
+                l.setVisibility(View.GONE);
+                t.setVisibility(View.GONE);
+            } else {
+                t.setText(Html.fromHtml(joinedStreamLinks), TextView.BufferType.SPANNABLE);
+                t.setLinkTextColor(getResources().getColor(R.color.text_link_color));
+                t.setMovementMethod(new LinkMovementMethod());
+                l.setVisibility(View.VISIBLE);
+                t.setVisibility(View.VISIBLE);
             }
 
             // Event online

@@ -309,7 +309,7 @@ public class MainActivity extends BaseActivity implements
     private void onGetOffersResponseSuccess(@Nullable List<Offer> offers) {
         if (offers != null) {
             MyApp.LogDebug(LOG_TAG, "Fetching streaming offers succeeded: " + offers.size() + " offers.");
-            // TODO Process offers
+            MyApp.offers = offers;
         } else {
             MyApp.LogDebug(LOG_TAG, "Fetching streaming offers failed. Offers is null.");
         }

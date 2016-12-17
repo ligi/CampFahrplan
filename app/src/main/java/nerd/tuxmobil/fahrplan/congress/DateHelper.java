@@ -6,6 +6,7 @@ import android.text.format.Time;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
@@ -89,6 +90,13 @@ public class DateHelper {
             e.printStackTrace();
         }
         return date;
+    }
+
+    public static Date shiftByDays(@NonNull final Date date, int numberOfDays) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.add(Calendar.DAY_OF_MONTH, numberOfDays);
+        return calendar.getTime();
     }
 
 }

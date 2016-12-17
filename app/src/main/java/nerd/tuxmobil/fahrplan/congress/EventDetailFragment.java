@@ -289,7 +289,9 @@ public class EventDetailFragment extends Fragment {
     }
 
     private void onAlarmTimesIndexPicked(int alarmTimesIndex) {
-        FahrplanMisc.addAlarm(getActivity(), lecture, alarmTimesIndex);
+        if (lecture != null) {
+            FahrplanMisc.addAlarm(getActivity(), lecture, alarmTimesIndex);
+        }
         getActivity().supportInvalidateOptionsMenu();
         getActivity().setResult(FragmentActivity.RESULT_OK);
         refreshEventMarkers();
@@ -327,8 +329,8 @@ public class EventDetailFragment extends Fragment {
                 }
                 return true;
             case R.id.item_fav:
-                lecture.highlight = true;
                 if (lecture != null) {
+                    lecture.highlight = true;
                     FahrplanMisc.writeHighlight(getActivity(), lecture);
                 }
                 getActivity().supportInvalidateOptionsMenu();
@@ -336,8 +338,8 @@ public class EventDetailFragment extends Fragment {
                 refreshEventMarkers();
                 return true;
             case R.id.item_unfav:
-                lecture.highlight = false;
                 if (lecture != null) {
+                    lecture.highlight = false;
                     FahrplanMisc.writeHighlight(getActivity(), lecture);
                 }
                 getActivity().supportInvalidateOptionsMenu();

@@ -20,11 +20,6 @@ import org.ligi.fahrplan.FahrplanContract.LecturesTable.Columns;
 import org.ligi.fahrplan.FahrplanContract.LecturesTable.Values;
 import org.ligi.fahrplan.FahrplanContract.MetasTable;
 
-interface OnParseCompleteListener {
-
-    public void onParseDone(Boolean result, String version);
-}
-
 public class FahrplanParser {
 
     private parser task;

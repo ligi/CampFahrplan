@@ -10,19 +10,11 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
-
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateEncodingException;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
-import org.ligi.fahrplan.BuildConfig;
-import org.ligi.fahrplan.R;
-
-interface OnCertAccepted {
-
-    void cert_accepted();
-}
 
 public class CertificateDialogFragment extends DialogFragment {
 

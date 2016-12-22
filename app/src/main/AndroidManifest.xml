@@ -12,7 +12,7 @@
             android:label="@string/app_name"
             android:name="org.ligi.fahrplan.MyApp"
             android:theme="@style/Theme.Congress"
-            >
+    >
         <activity
                 android:label="@string/app_name"
                 android:theme="@style/Theme.Congress.NoActionBar"
@@ -65,14 +65,18 @@
         </receiver>
 
         <activity
-            android:name="org.ligi.fahrplan.ChangeListActivity"
-            android:theme="@style/Theme.Congress.NoActionBar"
-            android:label="@string/schedule_changes" >
+                android:name="org.ligi.fahrplan.ChangeListActivity"
+                android:theme="@style/Theme.Congress.NoActionBar"
+                android:label="@string/schedule_changes">
         </activity>
         <activity
-            android:name="org.ligi.fahrplan.StarredListActivity"
-            android:theme="@style/Theme.Congress.NoActionBar"
-            android:label="@string/starred_lectures" >
+                android:name="org.ligi.fahrplan.StarredListActivity"
+                android:theme="@style/Theme.Congress.NoActionBar"
+                android:label="@string/starred_lectures">
         </activity>
+
+        <activity android:name="org.ligi.fahrplan.TalkPrefsImportActivity"
+                  android:exported="true"/>
+
     </application>
 </manifest>

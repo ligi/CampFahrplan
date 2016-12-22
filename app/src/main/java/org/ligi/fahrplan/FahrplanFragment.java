@@ -35,7 +35,6 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -43,14 +42,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.Set;
-
 import org.ligi.fahrplan.FahrplanContract.AlarmsTable;
-import org.ligi.fahrplan.R;
-
-interface OnRefreshEventMarkers {
-
-    public void refreshEventMarkers();
-}
 
 public class FahrplanFragment extends Fragment implements
         OnClickListener,

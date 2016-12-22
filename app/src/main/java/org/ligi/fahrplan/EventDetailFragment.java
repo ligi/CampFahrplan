@@ -20,18 +20,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-import org.ligi.fahrplan.BuildConfig;
-import org.ligi.fahrplan.R;
-
-interface OnCloseDetailListener {
-
-    public void closeDetailView();
-}
 
 public class EventDetailFragment extends Fragment {
 

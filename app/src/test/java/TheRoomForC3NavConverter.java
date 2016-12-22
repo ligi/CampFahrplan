@@ -1,6 +1,6 @@
 import org.junit.Test;
 
-import nerd.tuxmobil.fahrplan.congress.RoomForC3NavConverter;
+import org.ligi.fahrplan.RoomForC3NavConverter;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

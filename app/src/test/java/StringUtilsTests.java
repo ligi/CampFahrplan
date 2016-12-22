@@ -2,7 +2,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-import nerd.tuxmobil.fahrplan.congress.StringUtils;
+import org.ligi.fahrplan.StringUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

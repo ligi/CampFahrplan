@@ -6,7 +6,7 @@ import org.junit.runners.JUnit4;
 import java.util.Calendar;
 import java.util.Date;
 
-import nerd.tuxmobil.fahrplan.congress.DateHelper;
+import org.ligi.fahrplan.DateHelper;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

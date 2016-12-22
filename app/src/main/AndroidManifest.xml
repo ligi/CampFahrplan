@@ -74,5 +74,9 @@
             android:theme="@style/Theme.Congress.NoActionBar"
             android:label="@string/starred_lectures" >
         </activity>
+        <activity
+                android:name="org.ligi.fahrplan.TalkPrefsImportActivity"
+                android:exported="true" >
+        </activity>
     </application>
 </manifest>

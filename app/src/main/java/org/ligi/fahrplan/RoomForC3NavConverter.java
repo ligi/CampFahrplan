@@ -2,7 +2,6 @@ package org.ligi.fahrplan;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,9 +21,9 @@ public class RoomForC3NavConverter {
     }};
 
     @Nullable
-    public static String convert(@NonNull final String venue, @NonNull final String room) {
-        if (venue.toUpperCase().equals("CCH")) {
-            return CCH_MAP.get(room.toUpperCase().replace("SAAL","HALL"));
+    public static String convert(@NonNull final String venue, final String room) {
+        if (venue.toUpperCase().equals("CCH") && room != null) {
+            return CCH_MAP.get(room.toUpperCase().replace("SAAL", "HALL"));
         }
         return null;
     }

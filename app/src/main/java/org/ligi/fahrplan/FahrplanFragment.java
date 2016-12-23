@@ -49,6 +49,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ligi.fahrplan.FahrplanContract.AlarmsTable;
+import org.ligi.fahrplan.congress.BuildConfig;
 import org.ligi.fahrplan.congress.R;
 
 interface OnRefreshEventMarkers {
@@ -589,7 +590,7 @@ public class FahrplanFragment extends Fragment implements
             int minute = printTime % 60;
             sb.append(String.format("%02d", hour)).append(":");
             sb.append(String.format("%02d", minute));
-            if ((now.hour == hour) && (now.minute >= minute)
+            if ((now.monthDay - BuildConfig.SCHEDULE_FIRST_DAY_START_DAY == mDay) && (now.hour == hour) && (now.minute >= minute)
                     && (now.minute < (minute + 15))) {
                 event = inflater.inflate(R.layout.time_layout_now, null);
             } else {

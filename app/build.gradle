@@ -37,7 +37,7 @@ android {
         ccc33c3 {
             applicationId "org.ligi.fahrplan"
             buildConfigField "String", "SCHEDULE_URL", '"https://raw.githubusercontent.com/voc/33C3_schedule/master/everything.schedule.xml"'
-            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://events.ccc.de"'
+            buildConfigField "String", "SCHEDULE_DOMAIN_PART", '"https://fahrplan.events.ccc.de"'
             buildConfigField "String", "SCHEDULE_EVENT_PART", '"/events/%1$s.html"'
             buildConfigField "String", "SCHEDULE_PART", '"/congress/2016/Fahrplan"'
             buildConfigField "String", "VENUE", '"cch"'

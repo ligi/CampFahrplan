@@ -173,7 +173,8 @@
                 android:paddingRight="16dp"
                 android:paddingTop="10dp"
                 android:singleLine="false"
-                android:text="@string/copyright_notes">
+                android:id="@+id/copyright_notes">
+
         </TextView>
 
 

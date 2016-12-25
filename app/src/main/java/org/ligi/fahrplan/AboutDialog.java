@@ -67,6 +67,10 @@ public class AboutDialog extends DialogFragment {
         googlePlayStore.setMovementMethod(LinkMovementMethod.getInstance());
         googlePlayStore.setLinkTextColor(ContextCompat.getColor(context, R.color.text_link_color_dark));
 
+        TextView copyright_notes = (TextView) view.findViewById(R.id.copyright_notes);
+        copyright_notes.setText(HtmlCompat.fromHtml(getString(R.string.copyright_notes)));
+        copyright_notes.setMovementMethod(LinkMovementMethod.getInstance());
+
         // Build information
 
         TextView buildTimeTextView = (TextView) view.findViewById(R.id.build_time);

@@ -288,7 +288,7 @@ public class EventDetailFragment extends Fragment {
     @Nullable
     private String getRoomConvertedForC3Nav() {
         final String currentRoom = getActivity().getIntent().getStringExtra(BundleKeys.EVENT_ROOM);
-        return RoomForC3NavConverter.convert(BuildConfig.VENUE, currentRoom);
+        return RoomForC3NavConverter.INSTANCE.convert(BuildConfig.VENUE, currentRoom);
     }
 
     private Lecture eventid2Lecture(String event_id) {

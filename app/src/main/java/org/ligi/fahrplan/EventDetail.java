@@ -86,7 +86,7 @@ public class EventDetail extends BaseActivity {
         switch (item.getItemId()) {
             case R.id.item_nav:
                 final Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://c3nav.de/?d=" + getRoomConvertedForC3Nav()));
+                intent.setData(Uri.parse("https://c3nav.de/d/" + getRoomConvertedForC3Nav()));
                 startActivity(intent);
                 return true;
         }

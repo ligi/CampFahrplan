@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/layout_root"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
     <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="top"
             android:orientation="vertical"
             android:paddingLeft="32dp"
@@ -32,7 +33,7 @@
                 android:layout_gravity="center"
                 android:gravity="center|top"
                 android:paddingBottom="5dp"
-                android:text="Title"
+                tools:text="Title"
                 android:textColor="#FFF"
                 android:textSize="16sp"
                 android:textStyle="bold"/>
@@ -44,7 +45,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:paddingBottom="10dp"
-                android:text="Subtitle"
+                tools:text="Subtitle"
                 android:textColor="#FFF"
                 android:textStyle="italic"
                 android:typeface="serif">
@@ -58,7 +59,6 @@
                 android:gravity="center"
                 android:linksClickable="true"
                 android:paddingBottom="10dp"
-                android:singleLine="false"
                 style="@style/TextViewLinks"
                 android:text=""/>
 
@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="Version">
+                tools:text="Version">
         </TextView>
 
         <TextView
@@ -78,7 +78,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:paddingBottom="15dp"
-                android:text="Version">
+                tools:text="Version">
         </TextView>
 
         <include
@@ -92,7 +92,6 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:paddingTop="10dp"
-                android:singleLine="false"
                 android:text="@string/usage">
         </TextView>
 
@@ -107,7 +106,6 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:paddingTop="10dp"
-                android:singleLine="false"
                 android:linksClickable="true"
                 android:text=""/>
 
@@ -119,7 +117,6 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:paddingTop="10dp"
-                android:singleLine="false"
                 style="@style/TextViewLinks"
                 android:text=""/>
 
@@ -131,7 +128,6 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:paddingTop="10dp"
-                android:singleLine="false"
                 style="@style/TextViewLinks"
                 android:text=""/>
 
@@ -144,7 +140,6 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:paddingTop="10dp"
-                android:singleLine="false"
                 style="@style/TextViewLinks"
                 android:text=""/>
 
@@ -158,7 +153,6 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:paddingTop="10dp"
-                android:singleLine="false"
                 android:text="@string/libraries">
         </TextView>
 
@@ -172,7 +166,6 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:paddingTop="10dp"
-                android:singleLine="false"
                 android:id="@+id/copyright_notes">
 
         </TextView>

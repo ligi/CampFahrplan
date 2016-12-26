@@ -9,7 +9,7 @@ android {
         versionCode 49
         versionName "1.33.11"
         minSdkVersion 14
-        targetSdkVersion 22
+        targetSdkVersion 25
 
         archivesBaseName = "Fahrplan-$versionName"
 

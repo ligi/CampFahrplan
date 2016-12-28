@@ -6,8 +6,8 @@ android {
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        versionCode 51
-        versionName "1.33.13"
+        versionCode 52
+        versionName "1.33.14"
         minSdkVersion 14
         targetSdkVersion 25
         archivesBaseName = "Fahrplan-$versionName"

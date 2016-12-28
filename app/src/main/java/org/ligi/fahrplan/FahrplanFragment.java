@@ -203,6 +203,7 @@ public class FahrplanFragment extends Fragment implements
 
         SharedPreferences prefs = getActivity().getSharedPreferences(PREFS_NAME, 0);
         mDay = prefs.getInt("displayDay", 1);
+        MyApp.LogDebug(LOG_TAG, "displayDay = " + mDay);
 
         inflater = (LayoutInflater) getActivity()
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -219,6 +220,8 @@ public class FahrplanFragment extends Fragment implements
         if (MyApp.numdays > 1) {
             build_navigation_menu();
         }
+
+        if (mDay != 1) viewDay(false);
     }
 
     @Override

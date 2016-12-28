@@ -68,6 +68,7 @@ android {
 
 ext {
     okHttpVersion = "3.5.0"
+    picassoVersion = "2.5.2"
 }
 
 dependencies {
@@ -78,6 +79,7 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-runtime:$kotlin_version"
     compile 'com.github.ligi:ExtraCompats:0.4'
     compile "com.github.johnjohndoe:Brockman:b6cd736ab0a5882b2251b0a62b92f0e69f09827d"
+    compile "com.squareup.picasso:picasso:${picassoVersion}"
 
     testCompile 'junit:junit:4.12'
     testCompile 'com.squareup.assertj:assertj-android:1.1.1'

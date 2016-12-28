@@ -16,6 +16,21 @@ import info.metadude.java.library.brockman.models.Url;
 
 public class MediaStreamsHelper {
 
+    @Nullable
+    public static String getThumbnailUrlForLectureRoom(@NonNull List<Offer> offers,
+                                                       @NonNull String lectureRoom) {
+        for (Offer offer : offers) {
+            for (Group group : offer.groups) {
+                for (Room room : group.rooms) {
+                    if (lectureRoom.equalsIgnoreCase(room.scheduleName)) {
+                        return room.thumb;
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
     public static
     @NonNull
     List<Stream> getStreamsForLectureRoom(

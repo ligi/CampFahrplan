@@ -87,3 +87,9 @@
 # Picasso
 -dontwarn com.squareup.okhttp.**
 -dontwarn okhttp3.**
+
+# for moshi
+-keepclassmembers class ** {
+    @com.squareup.moshi.FromJson *;
+    @com.squareup.moshi.ToJson *;
+}

@@ -1,1 +1,1 @@
-This was a fork from [tuxmobils FahrPlan](http://github.com/tuxmobil/campfahrplan) application for [33C3](https://events.ccc.de/congress/2016/wiki/Main_Page) purposes. This *fork is not active anymore* - please *head over* to [confi](https://github.com/ligi/confi) for the next iteration
+This was a fork from [tuxmobils FahrPlan](http://github.com/tuxmobil/campfahrplan) application for [33C3](https://events.ccc.de/congress/2016/wiki/Main_Page) purposes. This **fork is not active anymore** - please **head over** to [confi](https://github.com/ligi/confi) for the next iteration
